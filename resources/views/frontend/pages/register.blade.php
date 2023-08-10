@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title','E-SHOP || Register Page')
+@section('title','MyShop | Register')
 
 @section('main-content')
 	<!-- Breadcrumbs -->

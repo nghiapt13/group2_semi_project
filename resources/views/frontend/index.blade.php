@@ -1,5 +1,5 @@
 @extends('frontend.layouts.master')
-@section('title','E-SHOP || HOME PAGE')
+@section('title','MyShop | Homepage')
 @section('main-content')
 <!-- Slider Area -->
 @if(count($banners)>0)
@@ -103,7 +103,7 @@
                             <!--/ End Tab Nav -->
                         </div>
                         <div class="tab-content isotope-grid" id="myTabContent">
-                             <!-- Start Single Tab -->
+                            <!-- Start Single Tab -->
                             @if($product_lists)
                                 @foreach($product_lists as $key=>$product)
                                 <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item {{$product->cat_id}}">
@@ -152,7 +152,7 @@
                                 </div>
                                 @endforeach
 
-                             <!--/ End Single Tab -->
+                            <!--/ End Single Tab -->
                             @endif
 
                         <!--/ End Single Tab -->
@@ -605,7 +605,7 @@
         });
     </script>
     <script>
-         function cancelFullScreen(el) {
+        function cancelFullScreen(el) {
             var requestMethod = el.cancelFullScreen||el.webkitCancelFullScreen||el.mozCancelFullScreen||el.exitFullscreen;
             if (requestMethod) { // cancel full screen.
                 requestMethod.call(el);
