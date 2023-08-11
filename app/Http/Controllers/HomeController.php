@@ -62,10 +62,10 @@ class HomeController extends Controller
     {
         $order=Order::find($id);
         if($order){
-           if($order->status=="process" || $order->status=='delivered' || $order->status=='cancel'){
+        if($order->status=="process" || $order->status=='delivered' || $order->status=='cancel'){
                 return redirect()->back()->with('error','You can not delete this order now');
-           }
-           else{
+        }
+        else{
                 $status=$order->delete();
                 if($status){
                     request()->session()->flash('success','Order Successfully deleted');
@@ -74,7 +74,7 @@ class HomeController extends Controller
                     request()->session()->flash('error','Order can not deleted');
                 }
                 return redirect()->route('user.order.index');
-           }
+        }
         }
         else{
             request()->session()->flash('error','Order can not found');
