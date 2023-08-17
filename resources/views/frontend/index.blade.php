@@ -168,7 +168,7 @@
     $featured=DB::table('products')->where('is_featured',1)->where('status','active')->orderBy('id','DESC')->limit(1)->get();
 @endphp --}}
 <!-- Start Midium Banner  -->
-{{-- <section class="midium-banner">
+<section class="midium-banner">
     <div class="container">
         <div class="row">
             @if($featured)
@@ -192,7 +192,7 @@
             @endif
         </div>
     </div>
-</section> --}}
+</section>
 <!-- End Midium Banner -->
 
 <!-- Start Most Popular -->
